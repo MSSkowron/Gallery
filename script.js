@@ -23,7 +23,12 @@ const showPrevImage = () => {
 }
 
 const closeSlider = () => {
-    popup.classList.add("hidden");
+    popup.classList.add("fade-out");
+    setTimeout(() => {
+        popup.classList.add("hidden");
+        popup.classList.remove("fade-out");
+    },300);
+    
 }
 
 thumbnails.forEach((thumbnail, index) => {
